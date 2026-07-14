@@ -47,6 +47,11 @@ export class Stroke extends Container {
         fontSize: CONFIG.STROKE.SIZE,
         fill: STROKE_COLORS[this.char] || '#ffffff',
         fontWeight: 'bold',
+        dropShadow: {
+          color: STROKE_COLORS[this.char] || '#ffffff',
+          blur: 4,
+          distance: 0,
+        },
       }),
     });
     this.text.anchor.set(0.5);

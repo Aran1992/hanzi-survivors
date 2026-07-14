@@ -1,4 +1,4 @@
-import { Container, Text, TextStyle, BlurFilter, Graphics } from 'pixi.js';
+import { Container, Text, TextStyle, Graphics } from 'pixi.js';
 import { CONFIG, EnemyConfig } from '../config';
 
 export type EnemyType = 'single' | 'elite' | 'boss';
@@ -38,14 +38,12 @@ export class Enemy extends Container {
     // 构建文字显示
     this.buildChars(cfg.chars);
 
-    // 外发光
-    const glow = new BlurFilter({ strength: 6 });
-    this.filters = [glow];
+    // 外发光由 dropShadow 实现
   }
 
   private buildChars(chars: string[]) {
-    const fontSize = chars.length === 4 ? 36 : chars.length === 2 ? 44 : CONFIG.PLAYER.SIZE * 0.9;
-    const spacing = chars.length === 4 ? 40 : chars.length === 2 ? 48 : 0;
+    const fontSize = chars.length === 4 ? 24 : chars.length === 2 ? 28 : CONFIG.PLAYER.SIZE * 0.9;
+    const spacing = chars.length === 4 ? 24 : chars.length === 2 ? 30 : 0;
 
     if (chars.length === 4) {
       // BOSS: 2×2 方形排列

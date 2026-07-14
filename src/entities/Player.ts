@@ -1,4 +1,4 @@
-import { Container, Text, TextStyle, BlurFilter } from 'pixi.js';
+import { Container, Text, TextStyle } from 'pixi.js';
 import { CONFIG } from '../config';
 
 /**
@@ -39,11 +39,6 @@ export class Player extends Container {
     this.charText.anchor.set(0.5);
     this.addChild(this.charText);
 
-    // 外发光
-    this.filters = [
-      new BlurFilter({ strength: 0 }),
-    ];
-
     // 基础尺寸
     this.hitArea = { contains: () => false } as any;
   }
@@ -54,9 +49,9 @@ export class Player extends Container {
     const breathOffset = Math.sin(this.breathTime * 3.5) * 3;
     this.charText.y = breathOffset;
 
-    // 发光呼吸
-    const glowIntensity = 0.5 + Math.sin(this.breathTime * 2.5) * 0.3;
-    (this.filters![0] as BlurFilter).strength = glowIntensity * 4;
+    // 发光透明度呼吸
+    const glowAlpha = 0.6 + Math.sin(this.breathTime * 2.5) * 0.2;
+    this.charText.alpha = glowAlpha;
   }
 
   /** 受伤 */

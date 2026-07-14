@@ -55,21 +55,8 @@ export class Game {
     // 背景
     const bg = new Graphics();
     bg.rect(0, 0, CONFIG.WIDTH, CONFIG.HEIGHT);
-    bg.fill({ color: 0x0a0a12 });
+    bg.fill({ color: 0x080810 });
     this.gameLayer.addChild(bg);
-
-    // 网格背景装饰
-    const grid = new Graphics();
-    grid.stroke({ color: 0xffffff, alpha: 0.03, width: 1 });
-    for (let x = 0; x <= CONFIG.WIDTH; x += 60) {
-      grid.moveTo(x, 0);
-      grid.lineTo(x, CONFIG.HEIGHT);
-    }
-    for (let y = 0; y <= CONFIG.HEIGHT; y += 60) {
-      grid.moveTo(0, y);
-      grid.lineTo(CONFIG.WIDTH, y);
-    }
-    this.gameLayer.addChild(grid);
 
     this.init();
   }
@@ -424,7 +411,7 @@ export class Game {
         const dx = this.player.x - s.x;
         const dy = this.player.y - s.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 35) {
+        if (dist < 28) {
           s.collected = true;
           this.strokeSystem.addStroke(s.char);
           this.strokeLayer.removeChild(s);

@@ -1,4 +1,4 @@
-import { Container, Text, TextStyle, Graphics, BlurFilter } from 'pixi.js';
+import { Container, Text, TextStyle, Graphics } from 'pixi.js';
 import { CONFIG, SkillDef } from '../config';
 
 export interface SkillSlot {

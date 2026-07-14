@@ -7,7 +7,7 @@ export const CONFIG = {
   /** 玩家 */
   PLAYER: {
     CHAR: '我',
-    SIZE: 48,
+    SIZE: 30,
     SPEED: 200,
     MAX_HP: 100,
     COLOR: '#00ff88',
@@ -66,13 +66,13 @@ export const CONFIG = {
   /** 子弹 */
   PROJECTILE: {
     SPEED: 400,
-    SIZE: 28,
+    SIZE: 20,
     LIFETIME: 2.0,  // 秒
   },
 
   /** 笔画掉落 */
   STROKE: {
-    SIZE: 20,
+    SIZE: 14,
     LIFETIME: 8.0,  // 秒
     SPEED: 30,       // 飘散速度
   },
@@ -83,7 +83,7 @@ export const CONFIG = {
       strokes: ['一', '丨'],
       damage: 10,
       speed: 500,
-      size: 32,
+      size: 22,
       color: '#ffdd00',
       glowColor: '#ffdd00',
       type: 'pierce',  // 穿透
@@ -94,7 +94,7 @@ export const CONFIG = {
       strokes: ['一', '一', '丨', '丨', '十'],
       damage: 15,
       speed: 0,     // 不移动
-      size: 48,
+      size: 30,
       color: '#ffaa00',
       glowColor: '#ffaa00',
       type: 'boomerang',
@@ -105,7 +105,7 @@ export const CONFIG = {
       strokes: ['亅', '丿', '丶'],
       damage: 8,
       speed: 350,
-      size: 24,
+      size: 18,
       color: '#ff6644',
       glowColor: '#ff6644',
       type: 'pierce',
@@ -116,7 +116,7 @@ export const CONFIG = {
       strokes: ['小', '人'],
       damage: 15,
       speed: 300,
-      size: 36,
+      size: 24,
       color: '#ff3300',
       glowColor: '#ff4400',
       type: 'explode',  // 爆炸
@@ -127,7 +127,7 @@ export const CONFIG = {
       strokes: ['火', '火'],
       damage: 20,
       speed: 320,
-      size: 40,
+      size: 28,
       color: '#ff2200',
       glowColor: '#ff6600',
       type: 'dual',
@@ -138,7 +138,7 @@ export const CONFIG = {
       strokes: ['炎', '火'],
       damage: 25,
       speed: 340,
-      size: 44,
+      size: 30,
       color: '#ff1100',
       glowColor: '#ff8800',
       type: 'triple',
@@ -149,7 +149,7 @@ export const CONFIG = {
       strokes: ['焱', '火'],
       damage: 35,
       speed: 360,
-      size: 52,
+      size: 34,
       color: '#ff0000',
       glowColor: '#ffaa00',
       type: 'quad',

@@ -1,4 +1,4 @@
-import { Container, Text, TextStyle, BlurFilter } from 'pixi.js';
+import { Container, Text, TextStyle } from 'pixi.js';
 
 /**
  * 技能投射物——文字子弹
@@ -49,9 +49,6 @@ export class Projectile extends Container {
     });
     this.textDisplay.anchor.set(0.5);
     this.addChild(this.textDisplay);
-
-    // 外发光
-    this.filters = [new BlurFilter({ strength: 8 })];
 
     // 方向
     if (opts.vx !== undefined && opts.vy !== undefined) {
