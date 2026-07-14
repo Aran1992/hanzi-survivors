@@ -1,0 +1,18 @@
+{
+  "name": "hanzi-survivors",
+  "version": "1.0.0",
+  "description": "汉字幸存者 - 汉字主题吸血鬼幸存者游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pixi.js": "^8.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4"
+  }
+}
